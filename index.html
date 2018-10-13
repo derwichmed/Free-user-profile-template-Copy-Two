@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/my_style.css"/>
+        <link rel="stylesheet" href="css/bootstrap.min_1.css"/>
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <style>
+            body{
+                background-color: #ececec
+            }
+            #user_profile{
+                background-color: white;
+                border: #cdcdcd 1px solid;
+                border-radius: 5px;
+                margin-top: 50px
+            }
+            .user_profile_menu{
+                border-bottom: #ececec 1px solid
+            }
+            .user_profile_search{
+                height: 40px;
+                border: #ececec 1px solid;
+                padding: 5px;
+                border-radius: 5px;
+                color: #cdcdcd
+            }
+            .navbar-nav .nav-link {
+                color: black;
+                font-weight: bold;
+                margin-left: 20px
+            }
+            .user_profile_body{
+                margin-top: 20px
+            }
+            .profile_user_img img{
+                width: 100%;
+                height: 160px;
+                border-radius: 5px;
+            }
+            .user_profile_body > div{
+                padding: 0px
+            }
+            .user_prifile_data_item{
+                padding: 0px;
+                list-style: none;
+            }
+            .user_prifile_data_item li{
+                display: inline-block
+            }
+            .user_prifile_data_item input{
+                background-color: #d2fdfb;
+                border: none;
+                border-radius: 2px;
+                color: #3e82fe;
+                font-weight: bold
+            }
+            .user_prifile_data_item li:first-child{
+                color: black;
+            }
+            .user_prifile_data_item li:last-child{
+                margin-top: 20px;
+                color: gray
+            }
+            .user_profile_skills > div{
+                padding: 0px
+            }
+            .user_info > div > div:first-child > div >  ul li{
+                display: inline-block;
+                list-style: none
+            }
+            
+            .user_info > div > div:first-child > div >  ul:first-child li img{
+                width: 20px;
+                height: 20px;
+            }
+            .user_info > div > div:first-child > div >  ul:first-child li:last-child{
+                color: gray;
+                font-size: 12px
+            }
+            .user_info > div > div:first-child > div >  ul:last-child li{
+                color: skyblue;
+                font-weight: bold;
+            }
+            .user_info > div > div:nth-child(2) p{
+                color: gray;
+                padding-left: 40px
+            }
+            .user_info > div > div:nth-child(2) ul li{
+                list-style: none;
+                display: inline-block
+            }
+            .user_info > div > div:nth-child(2) ul li img{
+                width: 20px;
+                height: 20px;
+                margin-right: 8px
+            }
+            .user_info > div > div:nth-child(2) ul li:first-child{
+                color: gray;
+                font-weight: bold;
+                font-size: 18px;
+            }
+            .user_info > div > div:nth-child(2) ul li{
+                height: 50px;
+            }
+            .user_info > div > div:nth-child(3) ul{
+                list-style: none;
+                padding: 0px;
+                padding-left: 20px
+            }
+            .user_info > div > div:nth-child(3) ul li{
+                display: inline-block;
+                margin-left: 20px
+            }
+            .user_info > div > div:nth-child(3) ul li img{
+                width: 20px;
+                height: 20px;
+            }
+            .user_info > div > div:nth-child(3) ul li button{
+                background-color: #d2fdfb;
+                border: none;
+                border-radius: 2px;
+                color: #3e82fe;
+                font-weight: bold
+            }
+            .user_info > div > div:nth-child(3) ul li:first-child{
+                color: gray;
+                font-weight: bold;
+            }
+            .user_info > div > div:nth-child(3) ul li:last-child{
+                color: gray;
+            }
+            .user_info > div > div:nth-child(5){
+                margin-top: 50px
+            }
+            .user_info > div > div:nth-child(5) > div{
+                padding-left: 51px
+            }
+            .user_info > div > div:nth-child(5) p strong{
+                color: gray
+            }
+            .user_info > div > div:nth-child(5) ul li{
+                list-style: none;
+                display: inline-block
+            }
+            .user_info > div > div:nth-child(5) ul li:first-child{
+                margin-right: 50px;
+            }
+            .user_info > div > div:nth-child(5) ul li:last-child a{
+                color: skyblue;
+                font-weight: bold
+            }
+        </style>
+    </head>
+    <body class="container-fluid">
+        <section class="row justify-content-center">
+            <div class="col-lg-8" id="user_profile">
+                <div class="container-fluid">
+                    <div class="row user_profile_menu">
+                         <nav class="navbar navbar-expand-lg" style="margin-right: 20px">
+                             <a class="navbar-brand" href="#">
+                                 <img src="img/sigle_webi4u_new_new_1.png"/>
+                             </a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="fa fa-list">lm</span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <input class="user_profile_search" type="text" placeholder="search"/>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#">
+                                    Find peopel
+                                </a>    
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#">
+                                    Messages
+                                </a>    
+                                
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#">
+                                    My contact
+                                </a>    
+                                
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#">
+                                    <img src=""/>
+                                </a>
+                            </li>
+                        </ul>
+                        </div>
+                      </nav>
+                    </div>
+                    <div class="row user_profile_body">
+                        <div class="col-lg-3">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg profile_user_img">
+                                        <img src="img/2018-08-07-015615.jpg"/>
+                                        <hr/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg" style="padding: 0px">
+                                        <strong style="
+                                                color: gray;
+                                                text-decoration: underline
+                                                ">
+                                            WORK
+                                        </strong>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-lg" style="padding: 0px">
+                                        <ul class="user_prifile_data_item">
+                                            <li>
+                                                <strong>work one</strong>
+                                            </li>
+                                            <li>
+                                                <input type="button" value="primary"/>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    je travaille en developement informatique
+                                                    en web site privée
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <ul class="user_prifile_data_item">
+                                            <li>
+                                                <strong>work one</strong>
+                                            </li>
+                                            <li>
+                                                <input type="button" value="primary"/>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    je travaille en developement informatique
+                                                    en web site privée
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg" style="padding: 0px">
+                                        <strong style="
+                                                color: gray;
+                                                text-decoration: underline
+                                                ">
+                                            SKILLS
+                                        </strong>
+                                    </div>
+                                </div>
+                                <div class="row user_profile_skills">
+                                    <div class="col-lg">
+                                        <ul>
+                                            <li>
+                                                <strong>
+                                                    web- webdesign
+                                                </strong>
+                                            </li>
+                                            <li>
+                                                <strong>
+                                                    android&&ios
+                                                </strong>
+                                            </li>
+                                            <li>
+                                                <strong>
+                                                    java&&jee
+                                                </strong>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg user_info">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg">
+                                        <ul>
+                                            <li>
+                                                <strong>
+                                                    mouhamed ali derwich
+                                                </strong>
+                                            </li>
+                                            <li>
+                                                <img src="img/basic1-017_location-512.png"/>
+                                            </li>
+                                            <li>
+                                                france paris
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                Product designer
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg">
+                                        <p>RANKINGS</p>
+                                        <ul>
+                                            <li><strong>7.8</strong></li>
+                                            <li><img src="img/kisspng-star-gold-clip-art-red-star-5ab70a10a08437.7564797115219451046575.jpg"/></li>
+                                            <li><img src="img/kisspng-star-gold-clip-art-red-star-5ab70a10a08437.7564797115219451046575.jpg"/></li>
+                                            <li><img src="img/kisspng-star-gold-clip-art-red-star-5ab70a10a08437.7564797115219451046575.jpg"/></li>
+                                            <li><img src="img/kisspng-star-gold-clip-art-red-star-5ab70a10a08437.7564797115219451046575.jpg"/></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg">
+                                        <ul>
+                                            <li>
+                                                <img src="img/mail-512.png"/>send messages
+                                            </li>
+                                            <li>
+                                                <button>
+                                                    <img src="img/contact.png"/>contact
+                                                </button>
+                                            </li>
+                                            <li>
+                                                raport user
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr/>
+                                <div class="row">
+                                    <div class="col-lg">
+                                        <p>
+                                            <strong>
+                                                contact information
+                                            </strong>
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                Phone:
+                                            </li>
+                                            <li>
+                                                <a href="">+215 455 455 487</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                Adress:
+                                            </li>
+                                            <li>
+                                                rzr zr df f zez e dfd zez s tjh e ee 
+                                                ea ee fsf  aeae  ee
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                E-mail:
+                                            </li>
+                                            <li>
+                                                <a href="">mouhamed@gmail.com</a>
+                                            </li>
+                                        </ul>
+                                        <ul>
+                                            <li>
+                                                Site:
+                                            </li>
+                                            <li>
+                                                <a href="">webi4u.com</a>
+                                            </li>
+                                        </ul>
+                                        <p>
+                                            <strong>
+                                            basic information
+                                            </strong>
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                Birthday
+                                            </li>
+                                            <li>
+                                                01/01/2000
+                                            </li>
+                                        </ul>
+                                        
+                                        <ul>
+                                            <li>
+                                                Birthday
+                                            </li>
+                                            <li>
+                                                01/01/2000
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
